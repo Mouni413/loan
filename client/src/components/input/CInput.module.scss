@@ -1,0 +1,23 @@
+.inputContainer {
+    border: 1px solid #E1E3EA;
+    // width: 390px;
+    padding: 0px 12px;
+    height: 38px;
+    border-radius: 6px;
+    display: block;
+}
+
+.inputContainer::placeholder {
+    //styleName: Body/B-12-12-600;
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 12px;
+    letter-spacing: 0em;
+    // text-align: left;
+    color: #7E8299;
+}
+
+.inputContainer:focus {
+    border-color: blue;
+}

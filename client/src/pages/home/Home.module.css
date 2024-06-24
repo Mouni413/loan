@@ -1,0 +1,76 @@
+.homeContainer {
+  background-color: var(--white-color);
+  min-height: calc(100vh - 8vh);
+  width: 100vw;
+  .MuiTypography-h4 {
+    margin-bottom: 40px;
+  }
+}
+
+.loansContainer {
+  padding: 10px 40px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.heading {
+  text-align: center;
+  color: #2e7d32;
+  font-weight: 800;
+  font-size: 32px;
+  text-shadow: 1px 2px 3px rgb(198, 230, 150);
+  margin-bottom: 20px;
+}
+
+.paragraph {
+  font-size: 18px;
+  text-align: justify;
+  width: 95%;
+  margin: 20px auto;
+  line-height: 1.6;
+  color: #333333;
+}
+
+button {
+  border: none;
+  background: #4caf50;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+  transition: background 0.3s;
+
+  &:hover {
+    background: #45a049;
+  }
+}
+
+.scrollUpBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: none; /* Initially hidden */
+  width: 50px;
+  height: 50px;
+  background-color: var(--main-text-color);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1000; /* Ensure the button stays on top of other content */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s;
+  &:hover {
+    background-color: rgb(201, 184, 217);
+    color: rgb(49, 46, 49);
+  }
+}

@@ -1,0 +1,130 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+:root {
+  --heights: 50vh;
+  --widths: 100%;
+}
+
+.container {
+  height: var(--heights);
+  width: var(--widths);
+  position: relative;
+  margin-top: 0;
+  padding: 20px;
+  overflow: hidden;
+  background-size: cover; /* Adjust background image entirely to the container */
+  background-position: center; /* Center the background image */
+}
+
+.container:hover {
+  .prev,
+  .next {
+    color: black;
+
+    &:hover {
+      color: white;
+      background-color: rgba(0, 0, 0, 0.6);
+      transition: all 0.5s ease-in;
+    }
+  }
+
+  .dot:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+.active {
+  display: inline-block;
+}
+
+.inactive {
+  display: none;
+}
+
+.slides {
+  height: var(--heights);
+  width: var(--widths);
+  position: relative;
+}
+
+.slideImage {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+  background-size: cover;
+}
+
+.slideTitle,
+.slideText {
+  width: 100%;
+  height: 100%;
+  color: rgb(14, 13, 13);
+  font-size: 50px;
+  position: absolute;
+  text-align: center;
+  top: 40%;
+  z-index: 10;
+}
+
+.slideText {
+  top: 65%;
+  font-size: 2rem;
+}
+
+.prev,
+.next {
+  color: transparent;
+  cursor: pointer;
+  z-index: 100;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 1rem;
+  margin-top: -3rem;
+  font-size: 40px;
+  font-weight: bold;
+  border-radius: 0px 5px 5px 0px;
+
+  &:hover {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: all 0.5s ease-in;
+  }
+}
+
+.next {
+  right: 0;
+  border-radius: 5px 0px 0px 5px;
+}
+
+.allDots {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  top: 85%;
+  justify-content: center;
+  z-index: 200;
+}
+
+.dot {
+  cursor: pointer;
+  height: 1.5rem;
+  width: 1.5rem;
+  margin: 0px 3px;
+  background-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+.activeDot {
+  background-color: rgba(255, 255, 255, 0.5);
+}
